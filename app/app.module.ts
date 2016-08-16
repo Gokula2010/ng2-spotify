@@ -20,7 +20,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
    ],
   declarations: [ 
     AppComponent,
-    NavbarComponent,
+    //NavbarComponent,
     SearchComponent,
     AboutComponent 
   ],
