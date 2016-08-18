@@ -22,7 +22,7 @@ import { ArtistComponent } from './components/artist/artist.component';
    ],
   declarations: [ 
     AppComponent,
-    NavbarComponent,
+    //NavbarComponent,
     SearchComponent,
     AboutComponent,
     ArtistComponent
