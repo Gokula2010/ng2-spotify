@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
-
+import { Artist, Album } from '../../models/artist';
 @Component({
     moduleId: module.id,
     selector: 'search',
@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
     ngOnInit() { }
 
     searchMusic() {
-        console.log(this.searchStr);
+        //console.log(this.searchStr);
         this._spotifyService.searchMusic(this.searchStr)
             .subscribe(res=> {
                 //console.log(res.artists.items);
@@ -27,16 +27,16 @@ export class SearchComponent implements OnInit {
     }
 }
 
-export class Album {
-    id: number;
-    name: string;
+// export class Album {
+//     id: number;
+//     name: string;
 
-}
+// }
 
-export class Artist {
-    id: number;
-    name: string;
-    genres: any;
-    albums: Album[];
+// export class Artist {
+//     id: number;
+//     name: string;
+//     genres: any;
+//     albums: Album[];
 
-}
+// }
