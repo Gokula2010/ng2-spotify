@@ -18,14 +18,12 @@ export class ArtistComponent implements OnInit {
     albums: Album[];
 
 
-    constructor(private _spotifyService: SpotifyService, private _route: ActivatedRoute) {
+    constructor(private _spotifyService: SpotifyService, private _activateRoute: ActivatedRoute) {
 
     }
 
     ngOnInit() { 
-        console.log('ngOnInit - Called');
-        console.log(JSON.stringify(this._route.params));
-        this._route.params
+        this._activateRoute.params
             .map(params => params['id'])
             .subscribe((id)=> {
                 this._spotifyService.getArtist(id)
@@ -34,7 +32,7 @@ export class ArtistComponent implements OnInit {
                         console.log(JSON.stringify(this.artist));
                     })
 
-                 this._spotifyService.getAlbum(id)
+                 this._spotifyService.getAlbums(id)
                     .subscribe(albums=> {
                         this.albums = albums.items;
                     })
